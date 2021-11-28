@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html,body{
+
+    height: 100%;
+
+}
+
+#titulo{
+
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+
+#calculadora{
+    
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(52, 113, 124, 0.63);
+    height: 80%;
+    width: 30%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+     
+}
+
+
+#resultado{
+    display: inline-block;
+    background-color: rgb(238, 238, 238);
+    width: 95%;
+    height: 20%;
+    margin-top: 2.5%;
+    margin-left: 2%;
+    margin-bottom: 2.5%;
+    line-height: 15px;
+
+}
+
+#numAnterior{
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    
+}
+
+#operadorMatemático{
+    text-align: right;
+    margin-right: 5%;
+}
+
+#resultado h1{
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 15px;
+    font-size: 40px;
+}
+
+.botoes{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.calculadora button{
+    height: 15%;
+    width: 24%;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1200px){
+
+    #calculadora{
+    
+
+        background-color: rgba(52, 113, 124, 0.63);
+        height: 65%;
+        width: 30%;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        padding-left: 4px;
+        
+        
+    }
+
+    #resultado{
+   
+        line-height: 8px;
+    
+    }
+
+    #numAnterior{
+
+        margin-top: 10px;
+        
+    }
+
+    #resultado h1{
+      
+        font-size: 30px;
+    }
+   
+   
+    .calculadora button{
+        height: 14%;
+        width: 22%;
+        font-size: 15px;
+    }
+
+   
+    
+
+
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    #titulo{
+
+       display: none;
+    
+    }
+
+    #calculadora{
+    
+
+        background-color: rgba(52, 113, 124, 0.63);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none;
+        padding-left: 0;
+        
+        
+    }
+
+    #resultado{
+   
+        line-height: 8px;
+    
+    }
+
+    #numAnterior{
+
+        margin-top: 10px;
+        
+    }
+
+    #resultado h1{
+      
+        font-size: 30px;
+    }
+   
+   
+    .calculadora button{
+        height: 14%;
+        width: 22%;
+        font-size: 15px;
+    }
+
+
+}
