@@ -32,6 +32,263 @@ window.addEventListener("load", function(){
     var virgula = document.getElementById("virgula");
     var igual = document.getElementById("igual");
 
+    document.addEventListener("keydown", detecta)
+
+    function detecta(event){
+
+        var tecla = event.key;
+
+        if (tecla == "0"){
+
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "0";
+
+            }else{
+                resultado.innerHTML = textoNovo + "0";
+            }
+
+        }
+        
+        if (tecla == "1"){
+
+            var textoNovo = resultado.innerHTML;
+    
+            if(textoNovo == "0"){
+    
+                resultado.innerHTML = "1";
+    
+            }else{
+                resultado.innerHTML = textoNovo + "1";
+            }
+
+        }
+        
+        if (tecla == "2"){
+
+            var textoNovo = resultado.innerHTML;
+
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "2";
+    
+            }else{
+                resultado.innerHTML = textoNovo + "2";
+            }
+
+        }
+
+        if (tecla == "3"){
+
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "3";
+
+            }else{
+                resultado.innerHTML = textoNovo + "3";
+            }
+
+        }
+
+        if (tecla == "4"){
+
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "4";
+
+            }else{
+                resultado.innerHTML = textoNovo + "4";
+            }
+
+        }
+
+        if (tecla == "5"){
+
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "5";
+
+            }else{
+                resultado.innerHTML = textoNovo + "5";
+            }
+
+        }
+
+        if (tecla == "6"){
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "6";
+
+            }else{
+                resultado.innerHTML = textoNovo + "6";
+            }
+
+        }
+
+        if (tecla == "7"){
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "7";
+
+            }else{
+                resultado.innerHTML = textoNovo + "7";
+            }
+
+        }
+
+        if (tecla == "8"){
+
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "8";
+
+            }else{
+                resultado.innerHTML = textoNovo + "8";
+            }
+
+        }
+
+        if (tecla == "9"){
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+
+                resultado.innerHTML = "9";
+
+            }else{
+                resultado.innerHTML = textoNovo + "9";
+            }
+
+        }
+
+        if (tecla == "+"){
+
+            if(operadorAnterior == ""){
+                operadorAnterior = "+";
+                sinalAtual.innerHTML = "+";
+                numAnterior.innerHTML = resultado.innerHTML;
+                resultado.innerHTML = "0";
+                
+            }else{
+    
+                let res;
+                res = calcular();
+                resultado.innerHTML = "0";
+                operadorAnterior = "+";
+                sinalAtual.innerHTML = "+";
+                numAnterior.innerHTML = res;
+    
+    
+            }
+
+        }
+
+        if (tecla == "-"){
+
+            if(operadorAnterior == ""){
+                operadorAnterior = "-";
+                sinalAtual.innerHTML = "-";
+                numAnterior.innerHTML = resultado.innerHTML;
+                resultado.innerHTML = "0";
+                
+            }else{
+    
+                let res;
+                res = calcular();
+                resultado.innerHTML = "0";
+                operadorAnterior = "-";
+                sinalAtual.innerHTML = "-";
+                numAnterior.innerHTML = res;
+    
+    
+            }
+
+        }
+
+        if (tecla == "*"){
+
+            if(operadorAnterior == ""){
+                operadorAnterior = "x";
+                sinalAtual.innerHTML = "x";
+                numAnterior.innerHTML = resultado.innerHTML;
+                resultado.innerHTML = "0";
+                
+            }else{
+    
+                let res;
+                res = calcular();
+                resultado.innerHTML = "0";
+                operadorAnterior = "x";
+                sinalAtual.innerHTML = "x";
+                numAnterior.innerHTML = res;
+    
+    
+            }
+
+        }
+
+        if (tecla == "/"){
+
+            if(operadorAnterior == ""){
+                operadorAnterior = "/";
+                sinalAtual.innerHTML = "/";
+                numAnterior.innerHTML = resultado.innerHTML;
+                resultado.innerHTML = "0";
+                
+            }else{
+    
+                let res;
+                res = calcular();
+                resultado.innerHTML = "0";
+                operadorAnterior = "/";
+                sinalAtual.innerHTML = "/";
+                numAnterior.innerHTML = res;
+    
+    
+            }
+
+        }
+
+        if (tecla == ","){
+            var textoNovo = resultado.innerHTML;
+        
+            if(textoNovo == "0"){
+    
+                resultado.innerHTML = "0,";
+    
+            }else{
+                resultado.innerHTML = textoNovo + ",";
+            }
+        }
+
+        if (event.keyCode == 13){
+
+            if(operadorAnterior != ""){
+
+                res = calcular();
+                resultado.innerHTML = res;
+                operadorAnterior = "";
+                sinalAtual.innerHTML = "";
+                numAnterior.innerHTML = "";
+                
+            }
+
+        }
+    }
 
 
     um.addEventListener("click", function(){
@@ -46,6 +303,7 @@ window.addEventListener("load", function(){
             }
        
         });
+
 
     dois.addEventListener("click", function(){
         var textoNovo = resultado.innerHTML;
